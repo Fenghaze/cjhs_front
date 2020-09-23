@@ -1,0 +1,61 @@
+.UpContent{
+    text-align:center;
+    background-image:url(../images/index/searchtitle.jpg);
+    width:100%;
+    background-position:center top;
+    padding-top: 34px;
+    margin: 0;
+}
+.banner{
+    margin:0;
+    padding:0;
+    border:none;
+    outline:0;
+}
+.menu{
+    background-image:url(../images/index/bg_05.jpg);
+    background-repeat:no-repeat;
+    height:66px;
+    background-position:center;
+    position:relative;
+}
+.footer {
+    background-image: url(../images/index/bgblue.jpg);
+    text-align: center;
+    width: 100%;
+}
+.content {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-position: 50% top;
+    padding-top: 8px;
+    background-image: url(../images/index/bg_07.jpg);
+    margin: 0;
+    padding-right: 0px;
+    padding-left: 0px;
+    height: 870px;
+}
+#copyright{
+    text-align: left;
+    color: white;
+    margin-top: 23px;
+}
+label{
+    color: darkslategray;
+}
+html{
+    overflow-x: hidden;
+}
+#btn-menu{
+    font-size: medium;
+}
+#div-menu{
+    padding-left: 50px;
+}
+.search-div{
+    padding: 20px;
+}
+
+
+
