@@ -1,19 +1,32 @@
 <template>
   <div>
-      <!-- 搜索框 -->
-    <div class="row" style="margin-bottom:15px">
+    <!-- 搜索框 -->
+    <div class="row" style="margin-bottom: 15px">
       <div class="col-md-11">
         <search-box></search-box>
       </div>
     </div>
     <!-- 信息展示框 -->
-    <el-table height="610" :data="$store.state.posts_lst" stripe style="width: 100%; margin-bottom:5px">
+    <el-table
+      height="610"
+      :data="$store.state.posts_lst"
+      stripe
+      style="width: 100%; margin-bottom: 5px"
+    >
       <el-table-column label="文件名称">
         <template slot-scope="scope">
-          <a :href="$store.state.base_url +'/file/show/' + scope.row.id" v-html="scope.row.name" target="_blank"></a>
+          <a
+            :href="$store.state.base_url + '/file/show/' + scope.row.id"
+            v-html="scope.row.name"
+            target="_blank"
+          ></a>
         </template>
       </el-table-column>
-      <el-table-column prop="content" label="相关内容"></el-table-column>
+      <el-table-column label="相关内容" width="130">
+        <template slot-scope="scope">
+          <div v-html="scope.row.content"></div>
+        </template>
+      </el-table-column>
       <el-table-column prop="service_type" label="业务类型"></el-table-column>
       <el-table-column prop="file_type" label="文件类型"></el-table-column>
       <el-table-column prop="scope" label="效力层级"></el-table-column>
@@ -22,7 +35,9 @@
       <el-table-column prop="effect_time_s" label="生效时间"></el-table-column>
       <el-table-column label="操作">
         <template slot-scope="scope">
-          <a :href="$store.state.base_url +'/file/download/' + scope.row.id">下载</a>
+          <a :href="$store.state.base_url + '/file/download/' + scope.row.id"
+            >下载</a
+          >
         </template>
       </el-table-column>
     </el-table>
@@ -37,7 +52,7 @@ import pagination from "./Pagination.vue";
 export default {
   data() {
     return {
-      page: 1
+      page: 1,
     };
   },
   created() {
@@ -61,8 +76,7 @@ export default {
       this.$store.commit("search", this.page);
     },
   },
-  watch: {
-  },
+  watch: {},
   components: {
     "pagination-box": pagination,
     "search-box": search,

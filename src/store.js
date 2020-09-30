@@ -8,8 +8,8 @@ Vue.use(VueRouter)
 Vue.use(Vuex)
 var store = new Vuex.Store({
     state: {
-        base_url: "http://192.168.3.6:8080",  // 后台API接口
-        admin_url: "http://192.168.3.7:8080/login",  // 后台API接口
+        base_url: "http://47.93.231.64:8080",  // 后台API接口
+        admin_url: "http://127.0.0.1:80/admin",  // 后台管理地址
 
         posts_lst: [],    //查询结果
         total: 0,       // 查询总数

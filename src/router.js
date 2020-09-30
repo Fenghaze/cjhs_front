@@ -4,6 +4,7 @@ import SearchFiles from './components/SearchFiles.vue'
 import Comment from './components/Comment.vue'
 
 var router = new VueRouter({
+    base:'/pc',
     routes: [
         {
             path: '/', component: Index,

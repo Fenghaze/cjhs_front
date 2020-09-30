@@ -68,7 +68,7 @@
                 <h1 style="margin-top: 15px;">反馈列表</h1>
               </div>
               <div
-                style="border-left:8px solid #86bbdb;box-sizing: border-box;height: auto;overflow:auto;"
+                style="border-left:8px solid #86bbdb;box-sizing: border-box;height: 650px;overflow:auto;"
               >
                 <div id="ajaxcontent">
                   <table border="0" cellspacing="0" cellpadding="0" width="100%">

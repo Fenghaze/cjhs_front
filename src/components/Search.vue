@@ -31,7 +31,7 @@
       </div>
       <br />
       <div class="form-inline">
-        有效日期：
+        生效日期：
         <el-date-picker
           v-model="form.effect_time_start"
           type="date"

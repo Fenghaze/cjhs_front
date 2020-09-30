@@ -17,7 +17,7 @@ Vue.config.productionTip = false
 
 // 后台接口地址
 axios.defaults.withCredentials = true //允许携带cookie
-axios.defaults.baseURL='http://192.168.3.6:8080'
+axios.defaults.baseURL='http://47.93.231.64:8080'
 
 
 new Vue({
