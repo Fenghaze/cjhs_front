@@ -3,9 +3,7 @@
     <!--    导航    -->
     <div class="UpContent">
       <div class="banner">
-          <img :src="src" alt="" style="
-          width:53%;
-          height:136px">
+        <img :src="src" alt="" style="width: 53%; height: 136px" />
       </div>
       <div class="menu"></div>
     </div>
@@ -22,14 +20,21 @@
               <i class="el-icon-arrow-down el-icon--right"></i>
             </el-button>
             <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item v-for="item in $store.state.categories_lst" :key="item.id">
-                <router-link @click.native="search_type(item.service_type)" to>{{item.service_type}}</router-link>
+              <el-dropdown-item
+                v-for="item in $store.state.categories_lst"
+                :key="item.id"
+              >
+                <router-link
+                  @click.native="search_type(item.service_type)"
+                  to
+                  >{{ item.service_type }}</router-link
+                >
               </el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
         </div>
         <!-- 内容 -->
-        <div class="col-md-9" style="padding:0 60px 0 0">
+        <div class="col-md-9" style="padding: 0 60px 0 0">
           <!-- 表格 -->
           <router-view></router-view>
         </div>
@@ -40,22 +45,30 @@
     <div class="footer">
       <div class="row">
         <div class="col-md-6 text-right">
-          <img src="./assets/images/index/bluetitle.jpg" style="padding-top:  1%;" />
+          <img
+            src="./assets/images/index/bluetitle.jpg"
+            style="padding-top: 1%"
+          />
         </div>
         <div class="col-md-6">
-          <div class="text-left text-white" style="margin-top:20px">
-            <p style="margin-bottom:-4px">
+          <div class="text-left text-white" style="margin-top: 20px">
+            <p style="margin-bottom: -4px">
               <small>中华人民共和国长江海事局</small>
             </p>
-            <p style="margin-bottom:-4px">
+            <p style="margin-bottom: -4px">
               <small>技术提供：武汉理工大学</small>
             </p>
-            <p style="margin-bottom:-4px">
-              <router-link to="/comment" target='_blank' style="color:white"><small>反馈意见</small></router-link>
+            <p style="margin-bottom: -4px">
+              <!-- <router-link to="/comment" target='_blank' style="color:white"><small>反馈意见</small></router-link>
               &nbsp;&nbsp;
               <a :href="$store.state.admin_url" style="color:white" target='_blank'>
                 <small>后台管理</small>
-              </a>
+              </a> -->
+              <small
+                ><a href="http://www.beian.miit.gov.cn/" style="color: white"
+                  >鄂ICP备20001446号</a
+                >
+              </small>
             </p>
           </div>
         </div>
@@ -69,7 +82,7 @@ export default {
   data() {
     return {
       page: 1,
-      src:require('./assets/video/top_banner.gif')
+      src: require("./assets/video/top_banner.gif"),
     };
   },
   created() {},
